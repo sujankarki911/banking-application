@@ -16,20 +16,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.bankingapplication.entity.Account;
 import com.springboot.bankingapplication.service.AccountService;
-
-@RestController
+ // this class is created to controll the existing the method.
+@RestController   
 @RequestMapping("/account")
 public class AccountController {
 	//This is the change that i am doing for git third commit
-	@Autowired
+	@Autowired // 24 and 25 is equivalent to AccountService service = new AccountService ();
 	AccountService service;
 
 	// create the account //6 apis endpoints
 	@PostMapping("/create") // post mapping to create a bank account
 	public ResponseEntity<Account> createAccount(@RequestBody Account account) {
 		Account createAccount = service.createAccount(account);
-
+			
+	
 		return ResponseEntity.status(HttpStatus.CREATED).body(createAccount);
+//		return ResponseEntity
+//		        .status(201) // You can also use the numeric status code
+//		        .body(createAccount);
+
 	}
 
 	@GetMapping("/{accountNumber}")

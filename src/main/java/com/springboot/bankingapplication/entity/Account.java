@@ -12,7 +12,7 @@ import lombok.Data;
 @Entity
 @Table
 @Data
-public class Account {
+public class Account { //pojo class entity maps with databaase
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private Long account_number;

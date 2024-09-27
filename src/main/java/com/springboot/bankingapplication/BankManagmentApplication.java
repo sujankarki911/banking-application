@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//http://localhost:8080/swagger-ui/
+
 
 @SpringBootApplication
 @EnableSwagger2
